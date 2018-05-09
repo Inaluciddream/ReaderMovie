@@ -1,0 +1,20 @@
+<view>
+  <image class="banner-img" src='/images/post/sls.jpg'></image>
+  <view class="post-detail">
+    <view class="user">
+      <image src='/images/avatar/2.png' class="user-avatar"></image>
+      <text class="user-name">lucid_dream</text>
+      <text class="const-text">发表于</text>
+      <text class="post-date">三天前</text>
+    </view>
+    <text class="post-title">【夜听】不是所有人都能理解你</text>
+    <view class="tool">
+      <view class="circle">
+        <image class="collection" src='/images/icon/collection.png'></image>
+        <image class="share" src='/images/icon/share.png'></image>
+      </view>
+      <view class="hr"></view>
+    </view>
+    <text class="post-content">勇敢地去爱，哪怕没有结果，也可以洒脱地告别，就是最好的结果。</text>
+  </view>
+</view>

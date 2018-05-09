@@ -28,16 +28,11 @@ page {
   border-radius: 5px;
   text-align: center;
 }
-.moto-container:hover {
-  border-color: skyblue;
-}
 .moto {
   font-size: 25rpx;
   font-weight: bold;
   line-height: 80rpx;
   color: #405f80; 
 }
-.moto-container:hover .moto {
-  color: #fff;
-}
+
 

@@ -1,0 +1,80 @@
+.post-detail {
+  display: flex;
+  flex-direction: column;
+}
+.banner-img {
+  width: 100%;
+}
+.user {
+  flex-direction: row;
+}
+.user-avatar {
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+}
+.user-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  vertical-align: middle;
+}
+.user-name {
+  font-size: 30rpx;
+  font-weight: normal;
+  margin-left: 20rpx;
+  vertical-align: middle;
+  color: #666;
+}
+.const-text {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+.post-date {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 30rpx;
+  vertical-align: middle;
+}
+.post-title {
+  padding-left: 40rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-top: 30rpx;
+  letter-spacing: 2px;
+  color: #4b556c;
+}
+.tool {
+  margin-top: 20rox;
+}
+.circle {
+  float: right;
+  margin-right: 40rpx;
+  vertical-align: middle;
+}
+.circle image {
+  width: 90rpx;
+  height: 90rpx;
+}
+.share {
+margin-left: 30rpx;
+}
+.hr {
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+.post-content {
+  color: #666;
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+  padding-right: 30rpx;
+  line-height: 44rpx;
+  letter-spacing: 2px;
+  text-indent: 30rpx;
+}
