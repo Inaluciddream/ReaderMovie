@@ -1,0 +1,22 @@
+<view>
+  <swiper indicator-dots="true" autoplay="true" interval='5000' indicator-active-color='#fff' indicator-color='#ccc'>
+    <swiper-item><image src='/images/posts/xiaolong.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/posts/vr.png'></image></swiper-item>
+    <swiper-item><image src='/images/posts/cat.png'></image></swiper-item>
+  </swiper>
+  <view class="post-container">
+    <view class="post-author-info">
+      <image class="post-author-avatar" src='/images/avatar/1.png'></image>
+      <text class="post-author-name">lucid_dream</text>
+    </view>
+    <text class="post-title">马化腾、张一鸣朋友圈“掐架”</text>
+    <image class="post-img" src='/images/posts/mht.jpg'></image>
+    <text class="post-content">昨晚（5月7日），张一鸣在朋友圈庆祝抖音Tik Tok（抖音的国际版）获得了Q1 App Store免费下载量的第一名，他写道：“celebrate small success”。除此之外，他还在留言区留言：“微信的借口封杀，微视的抄袭搬运挡不住抖音的步伐。”这句话引起了耿直boy马化腾的注意。</text>
+    <view class="post-like">
+      <image class="post-like-img" src='/images/icon/chat.png'></image>
+      <text class="post-like-font">100</text>
+      <image class="post-like-img" src='/images/icon/view.png'></image>
+      <text class="post-like-font">499</text>
+    </view>
+  </view>
+</view>
