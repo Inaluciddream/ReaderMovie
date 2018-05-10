@@ -1,20 +1,27 @@
 <view>
-  <image class="banner-img" src='/images/post/sls.jpg'></image>
+  <view class="banner">
+
+    <image class="audio" wx:if="{{isPause}}" src="/images/music/music-start.png"></image>
+    <image class="audio" wx:else="{{isPause}}" src="/images/music/music-stop.png"></image>
+
+    <image class="banner-img" src="{{curPostInfo.headImgSrc}}"></image>
+  </view>
   <view class="post-detail">
     <view class="user">
-      <image src='/images/avatar/2.png' class="user-avatar"></image>
-      <text class="user-name">lucid_dream</text>
+      <image src="{{curPostInfo.avatar}}" class="user-avatar"></image>
+      <text class="user-name">{{curPostInfo.author}}</text>
       <text class="const-text">发表于</text>
-      <text class="post-date">三天前</text>
+      <text class="post-date">{{curPostInfo.dateTime}}</text>
     </view>
-    <text class="post-title">【夜听】不是所有人都能理解你</text>
+    <text class="post-title">{{curPostInfo.title}}</text>
     <view class="tool">
       <view class="circle">
-        <image class="collection" src='/images/icon/collection.png'></image>
-        <image class="share" src='/images/icon/share.png'></image>
+        <image wx:if="{{collected}}" catchtap="isCol" class="collection" src='/images/icon/collection.png'></image>
+        <image wx:else="{{collected}}" catchtap="isCol" class="collection" src='/images/icon/collection-anti.png'></image>
+        <image class="share" catchtap="shareTo" src='/images/icon/share.png'></image>
       </view>
       <view class="hr"></view>
     </view>
-    <text class="post-content">勇敢地去爱，哪怕没有结果，也可以洒脱地告别，就是最好的结果。</text>
+    <text class="post-content">{{curPostInfo.detail}}</text>
   </view>
 </view>

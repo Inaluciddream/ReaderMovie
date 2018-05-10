@@ -9,16 +9,7 @@ Page({
   toDetail (event) {
     let postId = event.currentTarget.dataset.postid
     wx.navigateTo({
-      url: './post-detail/post-detail',
-      success: function(res){
-        // success
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
+      url: './post-detail/post-detail?curPostId=' + postId
     })
   }
 })
