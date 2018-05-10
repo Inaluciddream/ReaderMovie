@@ -1,10 +1,9 @@
 <view>
-  <view class="banner">
+  <view class="banner" catchtap="ctrlMusic">
 
-    <image class="audio" wx:if="{{isPause}}" src="/images/music/music-start.png"></image>
-    <image class="audio" wx:else="{{isPause}}" src="/images/music/music-stop.png"></image>
+    <image class="audio"src="{{ isPause ? '/images/music/music-start.png' : '/images/music/music-stop.png'}}"></image>
 
-    <image class="banner-img" src="{{curPostInfo.headImgSrc}}"></image>
+    <image class="banner-img" src="{{isPause ? curPostInfo.headImgSrc : curPostInfo.music.coverImg}}"></image>
   </view>
   <view class="post-detail">
     <view class="user">
