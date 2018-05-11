@@ -1,0 +1,143 @@
+<view class="m-index">
+  <view class="m-section">
+    <view class="tel-tool">
+      <text class="cat-title">正在热映</text>
+      <view class="cat-more">
+        <text class="more">更多</text>
+        <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="m-content">
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="m-section">
+    <view class="tel-tool">
+      <text class="cat-title">即将上映</text>
+      <view class="cat-more">
+        <text class="more">更多</text>
+        <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="m-content">
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="m-section">
+    <view class="tel-tool">
+      <text class="cat-title">Top250</text>
+      <view class="cat-more">
+        <text class="more">更多</text>
+        <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="m-content">
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+      <view class="movie-single">
+        <image class="cover-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2519994468.webp"></image>
+        <text class="movie-title">后来的我们</text>
+        <view class="score-tool">
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <image class="star" src="/images/icon/star.png"></image>
+          <text class="score">5.8</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
