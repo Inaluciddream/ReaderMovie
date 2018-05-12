@@ -1,0 +1,16 @@
+@import '/pages/movies/starTool-template/starTool-template.wxss';
+ 
+.movie-single {
+  display: flex;
+  flex-direction: column;
+}
+.cover-img {
+  width: 200rpx;
+  height: 270rpx;
+  padding-bottom: 20rpx;
+}
+.movie-title {
+  margin-bottom: 16rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

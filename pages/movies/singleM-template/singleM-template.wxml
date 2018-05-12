@@ -1,0 +1,8 @@
+<import src='/pages/movies/starTool-template/starTool-template.wxml' />
+<template name="singleMTemplate">
+  <view class="movie-single">
+    <image class="cover-img" src="{{coverImg}}"></image>
+    <text class="movie-title">{{title}}</text>
+    <template is="starToolTemplate" data="{{...rating}}"></template>  
+  </view>
+</template>

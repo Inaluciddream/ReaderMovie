@@ -18,7 +18,7 @@ Page({
         return true
       }
     })
-    var collected = wx.getStorageSync('colCache')
+    let collected = wx.getStorageSync('colCache')
     if (collected) {
       this.setData({
         collected: collected[curPostId] || false

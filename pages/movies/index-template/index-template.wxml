@@ -1,3 +1,18 @@
-<template >
+<import src='/pages/movies/singleM-template/singleM-template.wxml' />
+<template name="indexTemplate">
+  <view class="m-section">
+    <view class="tel-tool">
+      <text class="cat-title">{{catTitle}}</text>
+      <view class="cat-more" catch="getMoreMovies">
+        <text class="more">更多</text>
+        <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="m-content">
+      <block wx:for="{{movies}}" wx:for-item="movie" wx:key="title">
+        <template is="singleMTemplate" data="{{...movie}}"></template>
+      </block>
 
+    </view>
+  </view>
 </template>

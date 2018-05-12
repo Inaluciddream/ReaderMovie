@@ -1,0 +1,19 @@
+.score-tool {
+  display: flex;
+  flex-direction: row;
+  line-height: 17rpx;
+  height: 17rpx;
+  margin-top: 6rpx;
+  padding-left: 25rpx;
+
+}
+.star {
+  padding-left: 3rpx;
+  height: 17rpx;
+  width: 17rpx;
+}
+.score {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  color: #e09015;
+}
