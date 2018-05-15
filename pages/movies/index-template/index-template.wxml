@@ -3,7 +3,7 @@
   <view class="m-section">
     <view class="tel-tool">
       <text class="cat-title">{{catTitle}}</text>
-      <view class="cat-more" catch="getMoreMovies">
+      <view class="cat-more" catchtap="getMoreMovies" data-title="{{catTitle}}">
         <text class="more">更多</text>
         <image class="arrow-right" src="/images/icon/arrow-right.png"></image>
       </view>
@@ -12,7 +12,6 @@
       <block wx:for="{{movies}}" wx:for-item="movie" wx:key="title">
         <template is="singleMTemplate" data="{{...movie}}"></template>
       </block>
-
     </view>
   </view>
 </template>

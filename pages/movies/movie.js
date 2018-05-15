@@ -48,6 +48,12 @@ Page({
     let tempObj = {}
     tempObj[dataKey] = {movies, catTitle}
     this.setData(tempObj)
+  },
+  // 进入更多页面
+  getMoreMovies (event) {
+    let currentTitle = event.currentTarget.dataset.title
+    wx.navigateTo({
+      url: '/pages/movies/more-movies/more-movies?currentTitle=' + currentTitle
+    })
   }
-
 })

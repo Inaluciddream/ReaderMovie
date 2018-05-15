@@ -1,0 +1,10 @@
+@import '/pages/movies/singleM-template/singleM-template.wxss';
+.movie-single {
+  width: calc(100% / 3 - 5px);
+  float: left;
+  margin-bottom: 40rpx;
+}
+.grid-container {
+  height: 1300rpx;
+  padding:40rpx 0 40rpx 22rpx;
+}

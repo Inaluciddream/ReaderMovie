@@ -4,7 +4,12 @@ const getMovieList  =  (url, dataKey, catTitle, reformData) => {
     url: url,
     method: 'GET',
     success (res) {
-      reformData(res.data.subjects, dataKey, catTitle)
+      if (catTitle) {
+        reformData(res.data.subjects, dataKey, catTitle)
+      } else {
+        reformData(res.data.subjects)
+      }
+      
     },
     fail (res) {
       console.log('加载失败')

@@ -1,11 +1,12 @@
 .score-tool {
   display: flex;
+  width: 160rpx;
+  margin: 0 auto;
   flex-direction: row;
   line-height: 17rpx;
   height: 17rpx;
   margin-top: 6rpx;
   padding-left: 25rpx;
-
 }
 .star {
   padding-left: 3rpx;

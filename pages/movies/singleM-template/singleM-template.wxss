@@ -8,6 +8,8 @@
   width: 200rpx;
   height: 270rpx;
   padding-bottom: 20rpx;
+  display: block;
+  margin: 0 auto;
 }
 .movie-title {
   margin-bottom: 16rpx;
