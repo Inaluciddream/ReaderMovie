@@ -1,3 +1,5 @@
 <import src='/pages/movies/more-template/more-template.wxml' />
 <template is="moreTemplate" data="{{movies}}"></template>
+<view wx:if="{{prompt}}" class="bottom-prompt">--------------  已经到底部了(╥╯^╰╥)  --------------</view>
+
 

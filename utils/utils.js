@@ -3,11 +3,11 @@ const getMovieList  =  (url, dataKey, catTitle, reformData) => {
   wx.request({
     url: url,
     method: 'GET',
-    success (res) {
+    success: (res) => {
       if (catTitle) {
-        reformData(res.data.subjects, dataKey, catTitle)
+        reformData(res.data, dataKey, catTitle)
       } else {
-        reformData(res.data.subjects)
+        reformData(res.data)
       }
       
     },

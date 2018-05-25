@@ -5,6 +5,16 @@
   margin-bottom: 40rpx;
 }
 .grid-container {
-  height: 1300rpx;
   padding:40rpx 0 40rpx 22rpx;
+  overflow: hidden;
+}
+.bottom-prompt {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #ccc;
+  margin: 20rpx 0;
 }

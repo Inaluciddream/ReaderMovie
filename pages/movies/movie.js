@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isAllowSkip: true
   },
 
   /**
@@ -22,11 +22,15 @@ Page({
     getMovieList(comingSoonUrl, 'comingSoon', '即将上映', this.reformData)
     getMovieList(top250Url, 'top250', '豆瓣Top250', this.reformData)
   },
-
+  onShow () {
+    this.setData({
+      isAllowSkip: true
+    })
+  },
   // 处理 接口来的数据 提取出想要的数据
   reformData (data, dataKey, catTitle) {
     let movies = []
-    data.forEach((item, i) => {
+    data.subjects.forEach((item, i) => {
       let coverImg = item.images.large
       let title = item.title.length > 6 ? item.title.substr(0,6) + '...' :  item.title
       let rating = {average: item.rating.average}
@@ -51,9 +55,14 @@ Page({
   },
   // 进入更多页面
   getMoreMovies (event) {
+    if (!this.data.isAllowSkip) return
+    this.setData({
+      isAllowSkip: false
+    })
     let currentTitle = event.currentTarget.dataset.title
     wx.navigateTo({
       url: '/pages/movies/more-movies/more-movies?currentTitle=' + currentTitle
     })
-  }
+  },
+  
 })
