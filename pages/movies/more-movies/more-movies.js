@@ -25,25 +25,6 @@ Page({
     this.setData({
       title: opt.currentTitle
     })
-    // let url = app.data.g_baseUrl
-    // let dataKey = ''
-    // switch (this.data.title) {
-    //   case '正在热映':
-    //     url += 'in_theaters'
-    //     dataKey = 'inTheaters'
-    //     break;
-    //   case '即将上映':
-    //     url += 'coming_soon'
-    //     dataKey = 'comingSoon'
-    //     break;
-    //   case '豆瓣Top250':
-    //     url += 'top250'
-    //     dataKey = 'top250'
-    //     break;
-    // }
-    // this.data.dataUrl = url
-    // this.data.dataKey = dataKey
-    // getMovieList(url, dataKey, null, this.reformData)
     this.firstLoad()
   },
   /**

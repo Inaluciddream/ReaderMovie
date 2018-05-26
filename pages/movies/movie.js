@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isAllowSkip: true
+    isAllowSkip: true,
+    isShowSearch: false
   },
 
   /**
@@ -64,5 +65,15 @@ Page({
       url: '/pages/movies/more-movies/more-movies?currentTitle=' + currentTitle
     })
   },
+  showSearchRel () {
+    this.setData({
+      isShowSearch: true
+    })
+  },
+  closeSearchRel () {
+    this.setData({
+      isShowSearch: false
+    })
+  }
   
 })
