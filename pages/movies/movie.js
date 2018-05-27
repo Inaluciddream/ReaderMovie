@@ -8,7 +8,8 @@ Page({
    */
   data: {
     isAllowSkip: true,
-    isShowSearch: false
+    isShowSearch: false,
+    searchFin: false
   },
 
   /**
@@ -70,10 +71,43 @@ Page({
       isShowSearch: true
     })
   },
-  closeSearchRel () {
+  toSearch (e) {
+    if(!e.detail.value) return
+    let url = app.data.g_baseUrl + 'search?q=' + e.detail.value
+    this.setData({keyword: e.detail.value})
+    let dataKey = 'searchRel'
+    getMovieList(url, dataKey, null, this.getSearchRel)
+
+  },
+  getSearchRel (data) {
+    let movies = []
+    data.subjects.forEach((item, i) => {
+      let coverImg = item.images.large
+      let title = item.title.length > 6 ? item.title.substr(0, 6) + '...' : item.title
+      let rating = { average: item.rating.average }
+      let starArr = []
+      for (let n = 0; n < 5; n++) {
+        if (n < item.rating.stars / 10) {
+          starArr.push(1)
+        } else {
+          starArr.push(0)
+        }
+      }
+
+      rating.stars = starArr
+      let temp = { coverImg, title, rating }
+      movies.push(temp)
+    })
     this.setData({
-      isShowSearch: false
+      movies: movies,
+      searchFin: true
+    })
+  },
+  closeSearch (e) {
+    this.setData({
+      isShowSearch: false,
+      movies: [],
+      searchFin: false
     })
   }
-  
 })

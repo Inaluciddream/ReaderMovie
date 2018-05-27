@@ -2,8 +2,9 @@
 <import src='/pages/movies/more-template/more-template.wxml' />
 <view class="search-box">
 
-<input class="search-bar" type="text" placeholder-class="p-class" placeholder="试着搜点喜欢的" confirm-type="搜索" bindfocus="showSearchRel" bindconfirm="closeSearchRel" />
+<input class="search-bar" type="text" placeholder-class="p-class" placeholder="试着搜点喜欢的" confirm-type="搜索" bindfocus="showSearchRel" bindconfirm="toSearch" />
 <image class="search-icon" src="/images/search.png"></image>
+<image class="close-icon" src="/images/close.png" wx:if="{{isShowSearch}}" bindtap="closeSearch"></image>
 </view>
 
 <view class="m-index" wx:if="{{!isShowSearch}}">
@@ -12,6 +13,6 @@
     <template is="indexTemplate" data="{{...top250}}"></template>
 </view>
 <view class="search-container" wx:if="{{isShowSearch}}">
-<text>显示出来啊</text>
-<!-- <template is="moreTemplate" data="{{movies}}"></template> -->
+ <text class="searchTip" wx:if="{{searchFin}}">已为您搜索出关于"{{keyword}}"的相关信息</text> 
+  <template is="moreTemplate" data="{{movies}}"></template>  
 </view>
