@@ -110,6 +110,7 @@ Page({
     })
     this.firstLoad()
   },
+  // 第一次加载
   firstLoad () {
     let url = app.data.g_baseUrl
     let dataKey = ''
@@ -127,8 +128,12 @@ Page({
         dataKey = 'top250'
         break;
     }
-    this.data.dataUrl = url
-    this.data.dataKey = dataKey
+    this.setData({
+      dataUrl: url,
+      dataKey: dataKey
+    })
+    // this.data.dataUrl = url
+    // this.data.dataKey = dataKey
     getMovieList(url, dataKey, null, this.reformData)
   }
 })

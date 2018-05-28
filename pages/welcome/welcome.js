@@ -1,7 +1,7 @@
 Page({
   toIndex: function () {
     console.log(1)
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/posts/post'
     })
     // wx.redirectTo({

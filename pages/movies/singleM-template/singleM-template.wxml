@@ -1,6 +1,6 @@
 <import src='/pages/movies/starTool-template/starTool-template.wxml' />
 <template name="singleMTemplate">
-  <view class="movie-single">
+  <view class="movie-single" bindtap="toMovieDetail" data-movieid="{{id}}">
     <image class="cover-img" src="{{coverImg}}"></image>
     <text class="movie-title">{{title}}</text>
     <template is="starToolTemplate" data="{{...rating}}"></template>  

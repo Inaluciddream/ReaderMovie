@@ -1,5 +1,5 @@
 const app = getApp()
-const {getMovieList} = require('../../utils/utils.js')
+const {getMovieList, movieDetail} = require('../../utils/utils.js')
 
 Page({
 
@@ -35,6 +35,7 @@ Page({
     data.subjects.forEach((item, i) => {
       let coverImg = item.images.large
       let title = item.title.length > 6 ? item.title.substr(0,6) + '...' :  item.title
+      let id = item.id
       let rating = {average: item.rating.average}
       let starArr = []
       for(let n = 0; n < 5; n++ ) {
@@ -46,7 +47,7 @@ Page({
       }
 
       rating.stars = starArr
-      let temp = {coverImg, title, rating}
+      let temp = {coverImg, title, rating, id}
       movies.push(temp)
     })
     // 动态赋值 setData 里需要的是一个 对象 
@@ -67,6 +68,7 @@ Page({
     })
   },
   showSearchRel () {
+    console.log('show')
     this.setData({
       isShowSearch: true
     })
@@ -84,6 +86,7 @@ Page({
     data.subjects.forEach((item, i) => {
       let coverImg = item.images.large
       let title = item.title.length > 6 ? item.title.substr(0, 6) + '...' : item.title
+      let id = item.id
       let rating = { average: item.rating.average }
       let starArr = []
       for (let n = 0; n < 5; n++) {
@@ -95,7 +98,7 @@ Page({
       }
 
       rating.stars = starArr
-      let temp = { coverImg, title, rating }
+      let temp = { coverImg, title, rating, id }
       movies.push(temp)
     })
     this.setData({
@@ -104,10 +107,20 @@ Page({
     })
   },
   closeSearch (e) {
+    console.log('close')
     this.setData({
       isShowSearch: false,
       movies: [],
       searchFin: false
     })
+  },
+  toMovieDetail (e) {
+    console.log(e)
+    if (!this.data.isAllowSkip) return
+    this.setData({
+      isAllowSkip: false
+    })
+    let url = "/pages/movies/movie-detail/movie-detail" + '?id=' + e.currentTarget.dataset.movieid
+    movieDetail(url)
   }
 })

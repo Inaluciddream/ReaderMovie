@@ -8,7 +8,7 @@ Page({
   },
   onLoad (opt) {
     let curPostId = opt.curPostId
-    this.data.curPostId = curPostId
+    this.setData({curPostId})
     postsData.postList.some((value, index) => {
       if (value.postId == curPostId) {
         // this.setData 会在 onLoad 结束前执行完成 

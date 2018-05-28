@@ -1,0 +1,20 @@
+<view class="movie-head">
+  <text class="head-movie-name"></text>
+  <view class="movie-country"></view>
+  <view class="praise"><text class="num-count"></text>人喜欢<text class="num-count">条评论</text></view>
+  <image class="cover-img" src=""></image>
+</view>
+<view class="movie-info">
+  <text class="movie-name"></text>
+  <view class="type-name">评分</view>
+  <view class="type-name">导演<text class="director-name"></text></view>
+  <view class="type-name">影人<text class="actor-name"></text></view>
+  <view class="type-name">类型<text class="movie-type"></text></view>
+</view>
+<view class="easy-plot">
+  <text class="type-name"></text>
+  <text class="plot"></text>
+</view>
+<view class="related-actor">
+
+</view>

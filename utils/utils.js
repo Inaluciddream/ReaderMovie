@@ -20,4 +20,11 @@ const getMovieList  =  (url, dataKey, catTitle, reformData) => {
   }) 
 }
 
-module.exports = {getMovieList}
+const movieDetail = (url) => {
+  console.log(url)
+  wx.navigateTo({
+    url
+  })
+}
+
+module.exports = {getMovieList, movieDetail}

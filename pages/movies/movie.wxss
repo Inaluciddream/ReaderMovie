@@ -9,16 +9,17 @@
   overflow: hidden;
 }
 .search-bar {
-  box-sizing: border-box;
-  width: 90%;
-  margin: 20rpx auto 0;
-  height: 60rpx;
-  line-height: 60rpx;
-  padding-left: 46rpx;
-  color: #666;
-  font-size: 24rpx;
-  border: 1px solid #efefef;
-  border-radius: 20rpx;
+ box-sizing:border-box;
+  width:80%;
+  margin-top:20rpx;
+  height:60rpx;
+  line-height:60rpx;
+  margin-left:16px;
+  color:#666;
+  font-size:24rpx;
+  border:1px solid #efefef;
+  border-radius:20rpx;
+  padding-left:50rpx;
 }
 .p-class {
   color: #666;
@@ -53,9 +54,11 @@
 }
 .close-icon  {
   position:absolute;
-  width:36rpx;
-  height:36rpx;
-  right:9%;
+  width:40rpx;
+  height:40rpx;
+  padding: 20rpx 20rpx;
+  right:6%;
   margin-right:-12rpx;
-  top:35rpx;
+  top:12rpx;
+  z-index: 999;
 }
