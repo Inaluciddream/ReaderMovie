@@ -1,20 +1,22 @@
 <view class="movie-head">
-  <text class="head-movie-name"></text>
-  <view class="movie-country"></view>
-  <view class="praise"><text class="num-count"></text>人喜欢<text class="num-count">条评论</text></view>
+  <view class="head-img-hover">
+    <text class="head-movie-name">{{movie.title}}</text>
+    <view class="movie-country">{{movie.countries}}</view>
+    <view class="praise"><text class="num-count">{{movie.collect_count}}</text>人看过<text class="num-count">{{movie.wish_count}}</text>人想看</view>
+  </view>
   <image class="cover-img" src=""></image>
 </view>
 <view class="movie-info">
-  <text class="movie-name"></text>
+  <text class="movie-name">{{movie.original_title}}</text>
   <view class="type-name">评分</view>
-  <view class="type-name">导演<text class="director-name"></text></view>
-  <view class="type-name">影人<text class="actor-name"></text></view>
-  <view class="type-name">类型<text class="movie-type"></text></view>
+  <view class="type-name">导演<text class="director-name">{{movie.directors}}</text></view>
+  <view class="type-name">影人<text class="actor-name">{{movie.actor}}</text></view>
+  <view class="type-name">类型<text class="movie-type">{{movie.genres}}</text></view>
 </view>
 <view class="easy-plot">
-  <text class="type-name"></text>
-  <text class="plot"></text>
+  <text class="type-name">剧情简介</text>
+  <text class="plot">{{movie.summary}}</text>
 </view>
 <view class="related-actor">
-
+  <!-- <image class="cover-img" src="{{}}"></image> -->
 </view>

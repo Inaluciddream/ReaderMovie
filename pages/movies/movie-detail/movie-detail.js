@@ -1,4 +1,5 @@
-// pages/movies/movie-detail/movie-detail.js
+const app = getApp()
+const {getMovieList} = require('../../../utils/utils')
 Page({
 
   /**
@@ -13,58 +14,39 @@ Page({
    */
   onLoad (opt) {
     let movieid = opt.id 
+    let url = 'https://douban.uieee.com/v2/movie/subject/' + movieid
+    getMovieList(url, null, null, this.reformData)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady () {
-  
+  reformData (data) {
+    let {id, title, pubdates, collect_count, wish_count, original_title, casts, summary} = data
+    let rating = {average: data.rating.average}
+    let starArr = []
+    for(let n = 0; n < 5; n++ ) {
+      if (n < data.rating.stars / 10) {
+        starArr.push(1)
+      } else {
+        starArr.push(0)
+      }
+    }
+    let countries = data.countries.join(' / ')
+    let directors = data.directors.map(item => {
+      return item.name
+    }).join(' / ')
+    let genres = data.genres.join('、')
+    let actor = casts.map(item => {
+      return item.name
+    }).join(' / ');
+    let movie = {id, title, countries, pubdates, collect_count, wish_count, original_title, directors, casts, genres, summary, rating, starArr, actor}
+    this.setData({movie})
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom () {
-  
-  },
-
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage () {
-    return {
-      title: '离思五首·其四',
-      desc: '曾经沧海难为水，除却巫山不是云',
-      path: '/pages/posts/post-detail/post-detail?id=0'
-  }
+      return {
+        title: '离思五首·其四',
+        desc: '曾经沧海难为水，除却巫山不是云',
+        path: '/pages/posts/post-detail/post-detail?id=0'
+    }
   }
 })
