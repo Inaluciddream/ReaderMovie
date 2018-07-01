@@ -1,5 +1,5 @@
 const app = getApp()
-const {getMovieList} = require('../../../utils/utils.js')
+const {getMovieList, movieDetail} = require('../../../utils/utils.js')
 
 Page({
 
@@ -15,7 +15,8 @@ Page({
     prompt: false,
     movies: [],
     loadCount: 0,
-    isFirstLoad: true
+    isFirstLoad: true,
+    isAllowSkip: true,
   },
 
   /**
@@ -33,6 +34,9 @@ Page({
   onShow () {
     wx.setNavigationBarTitle({
       title: this.data.title 
+    })
+    this.setData({
+      isAllowSkip: true
     })
   },
   reformData (data) {
@@ -53,6 +57,7 @@ Page({
       let coverImg = item.images.large
       let title = item.title.length > 6 ? item.title.substr(0,6) + '...' :  item.title
       let rating = {average: item.rating.average}
+      let id = item.id
       let starArr = []
       for(let n = 0; n < 5; n++ ) {
         if (n < item.rating.stars / 10) {
@@ -63,7 +68,7 @@ Page({
       }
 
       rating.stars = starArr
-      let temp = {coverImg, title, rating}
+      let temp = {coverImg, title, rating, id}
       movies.push(temp)
     })
     // 动态赋值 setData 里需要的是一个 对象 
@@ -135,5 +140,14 @@ Page({
     // this.data.dataUrl = url
     // this.data.dataKey = dataKey
     getMovieList(url, dataKey, null, this.reformData)
+  },
+  toMovieDetail (e) {
+    console.log(e)
+    if (!this.data.isAllowSkip) return
+    this.setData({
+      isAllowSkip: false
+    })
+    let url = "/pages/movies/movie-detail/movie-detail" + '?id=' + e.currentTarget.dataset.movieid
+    movieDetail(url)
   }
 })

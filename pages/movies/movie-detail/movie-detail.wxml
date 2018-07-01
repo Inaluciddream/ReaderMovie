@@ -1,22 +1,33 @@
 <view class="movie-head">
+  <image class="cover-img" src="{{movie.images.large}}"></image>
   <view class="head-img-hover">
     <text class="head-movie-name">{{movie.title}}</text>
-    <view class="movie-country">{{movie.countries}}</view>
-    <view class="praise"><text class="num-count">{{movie.collect_count}}</text>人看过<text class="num-count">{{movie.wish_count}}</text>人想看</view>
+    <view class="movie-country">{{movie.countries}} · {{movie.year}}</view>
+    <view class="praise"><text class="num-count">{{movie.collect_count}}</text><text class="plain-font">人看过</text><text class="num-count">{{movie.wish_count}}</text><text class="plain-font">想看</text></view>
   </view>
-  <image class="cover-img" src=""></image>
 </view>
 <view class="movie-info">
-  <text class="movie-name">{{movie.original_title}}</text>
+  <view class="movie-name">{{movie.original_title}}</view>
   <view class="type-name">评分</view>
   <view class="type-name">导演<text class="director-name">{{movie.directors}}</text></view>
   <view class="type-name">影人<text class="actor-name">{{movie.actor}}</text></view>
   <view class="type-name">类型<text class="movie-type">{{movie.genres}}</text></view>
 </view>
+<image class="movie-img" src="{{movie.images.small}}" />
+<view class="hr"></view>
 <view class="easy-plot">
   <text class="type-name">剧情简介</text>
   <text class="plot">{{movie.summary}}</text>
 </view>
+<view class="hr"></view>
 <view class="related-actor">
-  <!-- <image class="cover-img" src="{{}}"></image> -->
+  <text class="type-name"> 影人</text>
+  <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+    <block wx:for="{{movie.casts}}" wx:for-item="item" wx:key="{{movie.id}}">
+      <view class="cast-container">
+        <image class="cast-img" src="{{item.avatars.small}}"></image>
+        <text class="cast-name">{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
 </view>

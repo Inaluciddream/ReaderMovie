@@ -15,10 +15,11 @@ Page({
   onLoad (opt) {
     let movieid = opt.id 
     let url = 'https://douban.uieee.com/v2/movie/subject/' + movieid
+    // let url = 'https://douban.uieee.com/v2/movie/subject/' + 26925317
     getMovieList(url, null, null, this.reformData)
   },
   reformData (data) {
-    let {id, title, pubdates, collect_count, wish_count, original_title, casts, summary} = data
+    let {id, title, collect_count, wish_count, original_title, casts, summary, year, images} = data
     let rating = {average: data.rating.average}
     let starArr = []
     for(let n = 0; n < 5; n++ ) {
@@ -36,7 +37,7 @@ Page({
     let actor = casts.map(item => {
       return item.name
     }).join(' / ');
-    let movie = {id, title, countries, pubdates, collect_count, wish_count, original_title, directors, casts, genres, summary, rating, starArr, actor}
+    let movie = {id, title, countries, year, collect_count, wish_count, original_title, directors, casts, genres, summary, rating, starArr, actor, images}
     this.setData({movie})
   },
   /**
